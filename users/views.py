@@ -1,4 +1,4 @@
 from django.shortcuts import render
 
-def regsiter (request):
+def register (request):
     return render(request, 'users/register.html')
