@@ -5,13 +5,18 @@ from django.core.validators import MinValueValidator
 
 
 
-
+class Images(models.Model):
+    image = models.URLField()
 class Room(models.Model):
     name = models.CharField(max_length=200)
+    room_pics = models.ManyToManyField(Images)
     desc = models.TextField()
     price = models.DecimalField(
         decimal_places=2, max_digits=10, validators=[MinValueValidator(0)])
     room_no = models.PositiveIntegerField(unique=True)
+    size = models.IntegerField()
+    capacity = models.IntegerField()
+
     
 
     def __str__(self):
