@@ -38,14 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'hotel_app',
-    'users',
-
-     "crispy_forms",
+    "crispy_forms",
     "crispy_bootstrap5",
 ]
 
 
-AUTH_USER_MODEL = 'users.User'
+AUTH_USER_MODEL = 'hotel_app.User'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
